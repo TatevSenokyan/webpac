@@ -1,5 +1,5 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -8,8 +8,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name][contenthash].js',
-    clean: true
+    filename: '[name].js',
+    //clean: true
   },
   devServer: {
     static: {
@@ -19,14 +19,13 @@ module.exports = {
     open: true,
     hot:true,
     compress: true,
-    historyApiFallback: true
   },
-  plugins: [new HtmlWebpackPlugin(
-      {
-          filename: 'index.html',
-          template: 'src/template.html'
-      }
-  )],
+  // plugins: [new HtmlWebpackPlugin(
+  //     {
+  //         filename: 'index.html',
+  //         template: 'src/template.html'
+  //     }
+  // )],
   module: {
     rules: [
       {

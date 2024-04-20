@@ -14,3 +14,21 @@
     box-sizing: border-box;
     font-family: freedoka
   }
+
+  .error input, .errorEmail input, .error textarea, .errorEmail textarea {
+    border: 0.5px solid #DC143C;
+  }
+  
+  .error:after, .errorEmail:after {
+    font-size: 11px;
+    content: 'field is mandatory';
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    color: #DC143C;
+  }
+  
+  .errorEmail:after {
+    content: 'enter valid type';
+  }
